@@ -1,0 +1,27 @@
+\hypertarget{load__balancer_8h}{}\doxysection{/home/abaustinva/csce412/project3/load\+\_\+balancer.h File Reference}
+\label{load__balancer_8h}\index{/home/abaustinva/csce412/project3/load\_balancer.h@{/home/abaustinva/csce412/project3/load\_balancer.h}}
+
+
+Defines the Load\+Balancer class for managing web servers and requests.  
+
+
+{\ttfamily \#include \char`\"{}webservers.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for load\+\_\+balancer.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classloadBalancer}{load\+Balancer}}
+\begin{DoxyCompactList}\small\item\em A class to manage load balancing between web servers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the Load\+Balancer class for managing web servers and requests. 
+
+This header contains the declaration of the Load\+Balancer class, which manages a queue of requests and distributes them among multiple web servers. It also dynamically scales the number of web servers based on the load. 

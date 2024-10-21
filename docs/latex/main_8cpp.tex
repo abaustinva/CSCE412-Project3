@@ -1,0 +1,95 @@
+\hypertarget{main_8cpp}{}\doxysection{/home/abaustinva/csce412/project3/main.cpp File Reference}
+\label{main_8cpp}\index{/home/abaustinva/csce412/project3/main.cpp@{/home/abaustinva/csce412/project3/main.cpp}}
+
+
+This is the main driver program for the load balancer simulation.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}load\+\_\+balancer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{main_8cpp_aef300ac3cc3d796e5292908802ec53de}{generate\+Random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to generate random IP addresses. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a03cad0b7e74d387a0333d33cc76f895b}{generate\+Random\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to generate random processing times. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{main_8cpp_add014eb6753934f089d8f8bd961401ed}{generate\+Random\+Job\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to generate random job types. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a69077bde22f0811e5e9b81a5fbcde591}{add\+New\+Request\+Randomly}} ()
+\begin{DoxyCompactList}\small\item\em Function to randomly add new requests during the simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main driver program for the load balancer simulation. 
+
+This file contains the main function which initializes the simulation, sets up the load balancer, and runs the simulation for the specified number of clock cycles. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a69077bde22f0811e5e9b81a5fbcde591}\label{main_8cpp_a69077bde22f0811e5e9b81a5fbcde591}} 
+\index{main.cpp@{main.cpp}!addNewRequestRandomly@{addNewRequestRandomly}}
+\index{addNewRequestRandomly@{addNewRequestRandomly}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{addNewRequestRandomly()}{addNewRequestRandomly()}}
+{\footnotesize\ttfamily bool add\+New\+Request\+Randomly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to randomly add new requests during the simulation. 
+
+This function provides a 10\% chance of adding a new request during each cycle of the simulation.
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if a new request is added, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_aef300ac3cc3d796e5292908802ec53de}\label{main_8cpp_aef300ac3cc3d796e5292908802ec53de}} 
+\index{main.cpp@{main.cpp}!generateRandomIP@{generateRandomIP}}
+\index{generateRandomIP@{generateRandomIP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomIP()}{generateRandomIP()}}
+{\footnotesize\ttfamily string generate\+Random\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper function to generate random IP addresses. 
+
+This function generates a random IPv4 address in the format xxx.\+xxx.\+xxx.\+xxx using uniformly distributed random numbers.
+
+\begin{DoxyReturn}{Returns}
+string A randomly generated IP address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_add014eb6753934f089d8f8bd961401ed}\label{main_8cpp_add014eb6753934f089d8f8bd961401ed}} 
+\index{main.cpp@{main.cpp}!generateRandomJobType@{generateRandomJobType}}
+\index{generateRandomJobType@{generateRandomJobType}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomJobType()}{generateRandomJobType()}}
+{\footnotesize\ttfamily char generate\+Random\+Job\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper function to generate random job types. 
+
+This function randomly assigns either \textquotesingle{}P\textquotesingle{} for processing or \textquotesingle{}S\textquotesingle{} for streaming as the job type.
+
+\begin{DoxyReturn}{Returns}
+char The job type (\textquotesingle{}P\textquotesingle{} for processing, \textquotesingle{}S\textquotesingle{} for streaming). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a03cad0b7e74d387a0333d33cc76f895b}\label{main_8cpp_a03cad0b7e74d387a0333d33cc76f895b}} 
+\index{main.cpp@{main.cpp}!generateRandomTime@{generateRandomTime}}
+\index{generateRandomTime@{generateRandomTime}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomTime()}{generateRandomTime()}}
+{\footnotesize\ttfamily int generate\+Random\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper function to generate random processing times. 
+
+This function generates a random processing time between 1 and 10 clock cycles.
+
+\begin{DoxyReturn}{Returns}
+int A randomly generated time in clock cycles. 
+\end{DoxyReturn}

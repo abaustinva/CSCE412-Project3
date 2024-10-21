@@ -1,0 +1,97 @@
+\hypertarget{classloadBalancer}{}\doxysection{load\+Balancer Class Reference}
+\label{classloadBalancer}\index{loadBalancer@{loadBalancer}}
+
+
+A class to manage load balancing between web servers.  
+
+
+
+
+{\ttfamily \#include $<$load\+\_\+balancer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloadBalancer_ac502aef88bdac233151ad7c12c580473}{load\+Balancer}} (int num\+Servers)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classloadBalancer}{load\+Balancer}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classloadBalancer_a5d754b0df0ea7b6b7f84aa69df1ba951}{distribute\+Request}} (ofstream \&out\+File, int simulation\+Time)
+\begin{DoxyCompactList}\small\item\em Distribute requests to web servers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classloadBalancer_ad8b43ceceb61b5f3898a8fc0201864b3}\label{classloadBalancer_ad8b43ceceb61b5f3898a8fc0201864b3}} 
+void {\bfseries scale\+Servers} (ofstream \&out\+File)
+\item 
+\mbox{\Hypertarget{classloadBalancer_a9fd24316d7b9fa8179014542300d2b7a}\label{classloadBalancer_a9fd24316d7b9fa8179014542300d2b7a}} 
+bool {\bfseries has\+Pending\+Requests} ()
+\item 
+\mbox{\Hypertarget{classloadBalancer_aa4352e6cc09e73496ee7979a15abcd26}\label{classloadBalancer_aa4352e6cc09e73496ee7979a15abcd26}} 
+int {\bfseries get\+Current\+Cycle} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classloadBalancer_a5a6d4ba542a12c179f8e38f321e498ae}\label{classloadBalancer_a5a6d4ba542a12c179f8e38f321e498ae}} 
+queue$<$ \mbox{\hyperlink{structrequest}{request}} $>$ {\bfseries requests}
+\item 
+\mbox{\Hypertarget{classloadBalancer_a2cac598079f69ec749b0fb7e52b21a6c}\label{classloadBalancer_a2cac598079f69ec749b0fb7e52b21a6c}} 
+vector$<$ \mbox{\hyperlink{classWebServer}{Web\+Server}} $>$ {\bfseries servers}
+\item 
+\mbox{\Hypertarget{classloadBalancer_a294566a1f79db07e281021819570da1f}\label{classloadBalancer_a294566a1f79db07e281021819570da1f}} 
+int {\bfseries server\+Threshold}
+\item 
+\mbox{\Hypertarget{classloadBalancer_a6fb7c46e33a413973078239a6e5440bd}\label{classloadBalancer_a6fb7c46e33a413973078239a6e5440bd}} 
+int {\bfseries current\+Cycle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to manage load balancing between web servers. 
+
+This class is responsible for maintaining a queue of requests, distributing them among the available web servers, and dynamically scaling the number of servers to avoid overload. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloadBalancer_ac502aef88bdac233151ad7c12c580473}\label{classloadBalancer_ac502aef88bdac233151ad7c12c580473}} 
+\index{loadBalancer@{loadBalancer}!loadBalancer@{loadBalancer}}
+\index{loadBalancer@{loadBalancer}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{loadBalancer()}{loadBalancer()}}
+{\footnotesize\ttfamily load\+Balancer\+::load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{num\+Servers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{classloadBalancer}{load\+Balancer}}. 
+
+Initializes the load balancer with the specified number of web servers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Servers} & Number of web servers to initialize. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloadBalancer_a5d754b0df0ea7b6b7f84aa69df1ba951}\label{classloadBalancer_a5d754b0df0ea7b6b7f84aa69df1ba951}} 
+\index{loadBalancer@{loadBalancer}!distributeRequest@{distributeRequest}}
+\index{distributeRequest@{distributeRequest}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{distributeRequest()}{distributeRequest()}}
+{\footnotesize\ttfamily bool load\+Balancer\+::distribute\+Request (\begin{DoxyParamCaption}\item[{ofstream \&}]{out\+File,  }\item[{int}]{simulation\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Distribute requests to web servers. 
+
+This function distributes requests from the queue to the available web servers. It ensures that the simulation does not exceed the specified time limit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output file stream for logging. \\
+\hline
+{\em simulation\+Time} & The total time for the simulation in cycles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if simulation should continue, false if time limit is reached. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/abaustinva/csce412/project3/\mbox{\hyperlink{load__balancer_8h}{load\+\_\+balancer.\+h}}\end{DoxyCompactItemize}

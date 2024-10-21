@@ -1,0 +1,46 @@
+\label{index_md__home_abaustinva_csce412_project3_README}%
+\Hypertarget{index_md__home_abaustinva_csce412_project3_README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{Overview}\label{index_autotoc_md1}
+This project implements a dynamic load balancer simulation that distributes web requests across multiple servers while maintaining efficient resource utilization. The simulation includes automatic scaling of server instances based on request queue size and handles request processing within a specified time limit.\hypertarget{index_autotoc_md2}{}\doxysection{Files Structure}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{load__balancer_8h}{load\+\_\+balancer.\+h}}}\+: Main load balancer implementation
+\item {\ttfamily \mbox{\hyperlink{webservers_8h}{webservers.\+h}}}\+: Web server class implementation
+\item {\ttfamily \mbox{\hyperlink{request_8h}{request.\+h}}}\+: Request structure definition
+\item {\ttfamily \mbox{\hyperlink{main_8cpp}{main.\+cpp}}}\+: Main program and simulation controller
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{Features}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Dynamic server scaling based on request queue size (3\+:1 ratio)
+\item Random request generation with varied processing times
+\item Time-\/based simulation with cycle tracking
+\item Automatic load distribution across available servers
+\item Server addition/removal based on workload
+\item Detailed logging to output file
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{Usage}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{Compilation}\label{index_autotoc_md5}
+g++ \mbox{\hyperlink{main_8cpp}{main.\+cpp}} -\/o load\+\_\+balancer\+\_\+sim\hypertarget{index_autotoc_md6}{}\doxysubsection{Running the Simulation}\label{index_autotoc_md6}
+./load\+\_\+balancer\+\_\+sim\hypertarget{index_autotoc_md7}{}\doxysubsection{Input Parameters}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Number of initial web servers
+\item Total simulation time (in cycles)
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{Output}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Console output for real-\/time monitoring
+\item Detailed logs in output.\+txt including\+:
+\item Request processing details
+\item Server scaling events
+\item Current cycle count
+\item Queue status
+\item Final statistics
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{Main Loop}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Distributes requests to available servers
+\item Checks time constraints before processing
+\item Scales servers based on queue size
+\item Randomly adds new requests (10\% chance per cycle)
+\item Updates and logs statistics 
+\end{DoxyItemize}

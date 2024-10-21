@@ -1,0 +1,76 @@
+\hypertarget{classWebServer}{}\doxysection{Web\+Server Class Reference}
+\label{classWebServer}\index{WebServer@{WebServer}}
+
+
+A class to simulate a web server processing requests.  
+
+
+
+
+{\ttfamily \#include $<$webservers.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWebServer_a5044757cd8574d3f62a7eec5d51fb00f}{Web\+Server}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classWebServer}{Web\+Server}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWebServer_aa9ecd80211b8e8280ce7a2da8419f8cc}{process\+Request}} (\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{structrequest}{request}}, ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Processes a web request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWebServer_a02fff1dd9414d0fd6ff7960087b41038}\label{classWebServer_a02fff1dd9414d0fd6ff7960087b41038}} 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to simulate a web server processing requests. 
+
+This class represents a web server that processes requests from the load balancer. It logs the details of each processed request. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWebServer_a5044757cd8574d3f62a7eec5d51fb00f}\label{classWebServer_a5044757cd8574d3f62a7eec5d51fb00f}} 
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}}
+{\footnotesize\ttfamily Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{classWebServer}{Web\+Server}}. 
+
+Initializes the web server with a specific ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the web server. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWebServer_aa9ecd80211b8e8280ce7a2da8419f8cc}\label{classWebServer_aa9ecd80211b8e8280ce7a2da8419f8cc}} 
+\index{WebServer@{WebServer}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily void Web\+Server\+::process\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrequest}{request}}}]{request,  }\item[{ofstream \&}]{out\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Processes a web request. 
+
+Takes a request object and processes it, logging the details to the output file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The web request to process. \\
+\hline
+{\em out\+File} & Output file stream for logging. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/abaustinva/csce412/project3/\mbox{\hyperlink{webservers_8h}{webservers.\+h}}\end{DoxyCompactItemize}
